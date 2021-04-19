@@ -4,9 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
+    <title>Tree of Knowledge</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 </head>
 <body>
-    
+    <header>
+        <h1>Horiseon</h1>
+        <!-- place holder nav bar my need to change some to links for the wish list page -->
+        <div>
+            <ul>
+                <li>
+                    <a href="#">Featured</a>
+                </li>
+                <li>
+                    <a href="#">Recent Search</a>
+                </li>
+                <li>
+                    <a href="#">Wishlist</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- form start with search bars and submit button may need to change to have a button for each  -->
+    <form>
+
+        <label for="author">Author:</label><br>
+        <input type="text" id="authorSearch" name="author" value=""><br>
+
+        <label for="title">Title:</label><br>
+        <input type="text" id="titleSearch" name="title" value=""><br>
+
+        <label for="year">Year:</label><br>
+        <input type="text" id="yearSearch" name="year" value=""><br><br>
+
+        <input type="submit" value="Submit">
+
+
+        <!-- Alt for the above code. code below has no submit so as the user clicks away from the field it should search for results -->
+
+        <!-- <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label>Input Label
+                    <input type="text" placeholder=".medium-6.cell">
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label>Input Label
+                    <input type="text" placeholder=".medium-6.cell">
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form> -->
+
+      </form>
+
+      <section class="found-books">
+          <h2>Here are some books I have found!</h2>
+        <div id="foundBooks">
+            <!-- some type of card added with JavaScript will be added here -->
+        </div>
+      </section>
+
+      <footer>
+          <div>
+              <!-- page selection for the search goes here [<<][1][2][3][4][5][>>]  ect -->
+          </div>
+          <!-- second nav bar for bottom of page in case we increase the amount of books per page -->
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">Featured</a>
+                    </li>
+                    <li>
+                        <a href="#">Recent Search</a>
+                    </li>
+                    <li>
+                        <a href="#">Wishlist</a>
+                    </li>
+                </ul>
+          </div>
+      </footer>
 </body>
 </html>
