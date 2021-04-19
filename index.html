@@ -27,9 +27,9 @@
         </nav>
     </header>
     <!-- form start with search bars and submit button may need to change to have a button for each  -->
-    <form>
+    <!-- <form> -->
 
-        <label for="author">Author:</label><br>
+        <!-- <label for="author">Author:</label><br>
         <input type="text" id="authorSearch" name="author" value=""><br>
 
         <label for="title">Title:</label><br>
@@ -38,55 +38,76 @@
         <label for="year">Year:</label><br>
         <input type="text" id="yearSearch" name="year" value=""><br><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"> -->
 
 
         <!-- Alt for the above code. code below has no submit so as the user clicks away from the field it should search for results -->
 
-        <!-- <form>
+        <form>
             <div class="grid-container">
               <div class="grid-x grid-padding-x">
                 <div class="medium-6 cell">
-                  <label>Input Label
-                    <input type="text" placeholder=".medium-6.cell">
+                  <label class="form-text">Author:
+                    <input type="text" placeholder="Author">
                   </label>
                 </div>
+          </form>
+        <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
                 <div class="medium-6 cell">
-                  <label>Input Label
-                    <input type="text" placeholder=".medium-6.cell">
+                  <label class="form-text">Title:
+                    <input type="text" placeholder="Title">
                   </label>
                 </div>
-              </div>
-            </div>
-          </form> -->
-
-      </form>
+          </form>
+        <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label class="form-text">Date:
+                    <input type="text" placeholder="Date">
+                  </label>
+                </div>
+          </form>
+        
+      <!-- </form> -->
 
       <section class="found-books">
           <h2>Here are some books I have found!</h2>
         <div id="foundBooks">
             <!-- some type of card added with JavaScript will be added here -->
+
         </div>
       </section>
 
-      <footer>
+      <footer class="foot">
           <div>
               <!-- page selection for the search goes here [<<][1][2][3][4][5][>>]  ect -->
+              <div class="primary button-group hollow no-gaps">
+                <a class="button"><span class="fi-chevron-left"></span></a>
+                <a class="button">1</a>
+                <a class="button">2</a>
+                <a class="button">3</a>
+                <a class="button">4</a>
+                <a class="button">5</a>
+                <a class="button"><span class="fi-chevron-right"></span></a>
+                </div>
           </div>
           <!-- second nav bar for bottom of page in case we increase the amount of books per page -->
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">Featured</a>
-                    </li>
-                    <li>
-                        <a href="#">Recent Search</a>
-                    </li>
-                    <li>
-                        <a href="#">Wishlist</a>
-                    </li>
-                </ul>
-          </div>
+          <nav class="head-nav">
+            <ul class="menu align-center">
+                <li>
+                    <a class="button button secondary" href="#">Featured</a>
+                </li>
+                <li>
+                    <a class="button button secondary" href="#">Recent Search</a>
+                </li>
+                <li>
+                    <a class="button button secondary" href="#">Wishlist</a>
+                </li>
+            </ul>
+        </nav>
       </footer>
 </body>
 </html>
