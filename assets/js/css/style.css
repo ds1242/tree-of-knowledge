@@ -1,5 +1,24 @@
+:root {
+    --primary-color: #8db600;
+    --secondary-color: #d3d3d3;
+    --tertiary-color:;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.button {
+    border: 3px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
 }
