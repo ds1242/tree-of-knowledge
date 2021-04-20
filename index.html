@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tree of Knowledge</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/js/css/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1 class="head">Tree Of Knowledge</h1>
+        <!-- place holder nav bar my need to change some to links for the wish list page -->
+        <nav class="head-nav">
+            <ul class="menu align-center">
+                <li>
+                    <a class="button" href="#">Featured</a>
+                </li>
+                <li>
+                    <a class="button" href="#">Recent Search</a>
+                </li>
+                <li>
+                    <a class="button" href="#">Wishlist</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label class="form-text">Author:
+                    <input type="text" placeholder="Author">
+                  </label>
+                </div>
+          </form>
+        <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label class="form-text">Title:
+                    <input type="text" placeholder="Title">
+                  </label>
+                </div>
+          </form>
+      <!-- </form> -->
+
+      <section class="found-books">
+          <h2>Here are some books I have found!</h2>
+        <div id="foundBooks">
+            <!-- some type of card added with JavaScript will be added here -->
+
+        </div>
+      </section>
+
+      <footer class="foot">
+          <div>
+              <!-- page selection for the search goes here [<<][1][2][3][4][5][>>]  ect -->
+              <div class="primary button-group hollow no-gaps">
+                <a class="button"><span class="fi-chevron-left"></span></a>
+                <a class="button">1</a>
+                <a class="button">2</a>
+                <a class="button">3</a>
+                <a class="button">4</a>
+                <a class="button">5</a>
+                <a class="button"><span class="fi-chevron-right"></span></a>
+                </div>
+          </div>
+          <!-- second nav bar for bottom of page in case we increase the amount of books per page -->
+         
+      </footer>
+      <script src="./assets/js/script.js"></script>
 </body>
 </html>
