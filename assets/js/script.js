@@ -1,7 +1,3 @@
-var API_KEY = 'AIzaSyA87lRRkp_fiRnysl5X0N7eRVo9V85IngU'
-
-
-
 function bookSearch (){
     var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=';
     
