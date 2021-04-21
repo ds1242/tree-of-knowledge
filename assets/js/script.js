@@ -11,6 +11,7 @@ function bookSearch (searchTerm){
         return response.json();
     })   
     .then(function(data){
+        $('#foundBooks').empty();
         for(var i = 0; i < data.items.length; i++){
             var author = data.items[i].volumeInfo.authors;
             var pageCount = data.items[i].volumeInfo.pageCount;
@@ -24,7 +25,7 @@ function bookSearch (searchTerm){
 }
 
 function displayBookInfo(author, pageCount, publishDate, title, subtitle){
-
+    
     var bookList = document.getElementById("foundBooks");
     var cardCol = document.createElement('div');
     cardCol.classList.add("column", "small-6")
@@ -61,7 +62,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     var pDate = document.createElement('p');
     pDate.textContent = "Published: " + publishDate;
     card.appendChild(pDate);
-    
+
 }
 
 
