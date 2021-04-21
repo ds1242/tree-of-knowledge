@@ -24,9 +24,10 @@ function bookSearch (searchTerm){
 }
 
 function displayBookInfo(author, pageCount, publishDate, title, subtitle){
+
     var bookList = document.getElementById("foundBooks");
     var cardCol = document.createElement('div');
-    cardCol.classList.add("column", "small-4")
+    cardCol.classList.add("column", "small-6")
     bookList.appendChild(cardCol);
 
     var card = document.createElement('div');
@@ -45,8 +46,22 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     cardBody.className = 'car-section';
     card.appendChild(cardBody);
 
+    var pSubtitle = document.createElement('p');
+    pSubtitle.textContent = subtitle;
+    card.appendChild(pSubtitle);
 
-    console.log(title, subtitle, author, pageCount,publishDate);
+    var pAuthor = document.createElement('p');
+    pAuthor.textContent = "Written by: " + author;
+    card.appendChild(pAuthor);
+    
+    var pPageCount = document.createElement('p');
+    pPageCount.textContent = "Number of Pages: " + pageCount;
+    card.appendChild(pPageCount);
+
+    var pDate = document.createElement('p');
+    pDate.textContent = "Published: " + publishDate;
+    card.appendChild(pDate);
+    
 }
 
 
