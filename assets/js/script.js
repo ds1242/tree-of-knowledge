@@ -24,10 +24,28 @@ function bookSearch (searchTerm){
 }
 
 function displayBookInfo(author, pageCount, publishDate, title, subtitle){
-    // create display card(foundation so possibly something else)
-    // append to found books
-    // button to save to wishlist with local storage
-    // save to recent search page (do we only want a few results displayed?)
+    var bookList = document.getElementById("foundBooks");
+    var cardCol = document.createElement('div');
+    cardCol.classList.add("column", "small-4")
+    bookList.appendChild(cardCol);
+
+    var card = document.createElement('div');
+    card.className = 'card';
+    
+    cardCol.append(card)
+
+    var cardTitle = document.createElement('div');
+    cardTitle.className = 'card-divider';
+    cardTitle.textContent = title;
+    card.appendChild(cardTitle);
+
+
+
+    var cardBody = document.createElement('div');
+    cardBody.className = 'car-section';
+    card.appendChild(cardBody);
+
+
     console.log(title, subtitle, author, pageCount,publishDate);
 }
 
