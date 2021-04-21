@@ -46,3 +46,9 @@ function subjectSearch(event){
     console.log("subjectSearch");
 }
 
+// $('#author').on("submit", function(e){
+//     console.log("authorsearch");
+// })
+// titleEl.addEventListener("submit", titleSearch);
+// subjectEl.addEventListener("click", subjectSearch);
+authorEl.addEventListener("submit", authorSearch);

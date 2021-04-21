@@ -11,8 +11,8 @@
 <body>
     <header class="head">
         <h1 >Tree Of Knowledge</h1>
-        <!-- place holder nav bar my need to change some to links for the wish list page -->
       </header>
+      <!-- place holder nav bar my need to change some to links for the wish list page -->
         <nav class="head-nav">
           <ul class="menu align-spaced">
             <li>
@@ -26,45 +26,35 @@
             </li>
           </ul>
         </nav>
-      
-        <form class="input-form align-center">
-            <div class="grid-container">
-              <div class="grid-x grid-padding-x">
-                <div class="medium-8 cell">
-                  <label class="form-text">Author:                    
-                    <input type="text" placeholder="Betty Crocker">
-                    <button class="button" type="submit" id="author">Submit</button>
-                  </label>
-                </div>
-            <div class="grid-container">
-              <div class="grid-x grid-padding-x">
-                <div class="medium-8 cell">
-                  <label class="form-text">Title:
-                    <input type="text" placeholder="Slow Cooking for Two">
-                    <button class="button" type="submit" id="title">Submit</button>
-                  </label>
-                </div>
-            <div class="grid-container">
-              <div class="grid-x grid-padding-x">
-                <div class="medium-8 cell">
-                  <label class="form-text">Subject:
-                    <input type="text" placeholder="Classic Recipes">
-                    <button class="button" type="submit" id="subject">Submit</button>
-                  </label>
-                </div>
-          </form>
+        
+        <section class="input align-center">
+          <div class="grid-x grid-padding-x align-center"> <!-- Aligned to the center -->
+            <label class="cell medium-6 form-text">Author:
+                <input type="text" id="author" placeholder="Betty Crocker" />
+                <button type="submit" class="button">Submit</button>
+            </label>
+            
+          </div>
+          <div class="grid-x grid-padding-x align-center"> <!-- Aligned to the center -->
+            <label class="cell medium-6 form-text">Title:<input type="text" placeholder="Slow Cooking for Two"><a class="button" href="#">Submit</a></label>
+            
+          </div>
+          <div class="grid-x grid-padding-x align-center"> <!-- Aligned to the center -->
+            <label class="cell medium-6 form-text">Subject:<input type="text" placeholder="Classic Recipes"><a class="button" href="#">Submit</a></label>
+            
+          </div>
+         </section>
   
 
       <section class="found-books">
           <h2>Here are some books I have found!</h2>
-        <div id="foundBooks">
+        <div class="books-list" id="foundBooks">
             <!-- some type of card added with JavaScript will be added here -->
-
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod fuga harum aliquid delectus, sequi id animi reprehenderit culpa alias aut repellendus odio nostrum! Hic, quo necessitatibus aliquam debitis blanditiis dolorem.
         </div>
       </section>
 
       <footer class="foot">
-          <div>
               <!-- page selection for the search goes here [<<][1][2][3][4][5][>>]  ect -->
               <div>
                 <a class="button"><<</a>
@@ -75,9 +65,6 @@
                 <a class="button">5</a>
                 <a class="button">>></a>
                 </div>
-          </div>
-          <!-- second nav bar for bottom of page in case we increase the amount of books per page -->
-         
       </footer>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
