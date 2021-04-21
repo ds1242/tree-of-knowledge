@@ -31,10 +31,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     console.log(title, subtitle, author, pageCount,publishDate);
 }
 
-function titleSearch(event){
-    event.preventDefault();
-    console.log("titleSearch");
-}
+
 
 function authorSearch(event){
     event.preventDefault();
@@ -46,9 +43,19 @@ function subjectSearch(event){
     console.log("subjectSearch");
 }
 
-// $('#author').on("submit", function(e){
+function titleSearch (event){
+    event.preventDefault();
+    console.log("titleSearch");
+}
+// $('#author').on("submit", function(event){
+//     event.preventDefault();
 //     console.log("authorsearch");
 // })
-// titleEl.addEventListener("submit", titleSearch);
-// subjectEl.addEventListener("click", subjectSearch);
-authorEl.addEventListener("submit", authorSearch);
+
+
+authorEl.addEventListener("click", authorSearch);
+titleEl.addEventListener("click", titleSearch);
+subjectEl.addEventListener("click", subjectSearch);
+
+
+
