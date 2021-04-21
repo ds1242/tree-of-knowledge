@@ -73,6 +73,8 @@ function authorSearch(event){
     var authorVal = authorText.value.trim();
     var searchText = "inauthor:" + authorVal;
     bookSearch(searchText);
+
+    authorText.value = "";
 }
 
 function subjectSearch(event){
@@ -81,6 +83,8 @@ function subjectSearch(event){
     var subjectVal = subjectText.value.trim();
     var searchText = "subject:" + subjectVal;
     bookSearch(searchText);
+
+    subjectText.value = "";
 }
 
 function titleSearch (event){
@@ -89,6 +93,8 @@ function titleSearch (event){
     var titleVal = titleText.value.trim();
     var searchText = "intitle:" + titleVal;
     bookSearch(searchText);
+
+    titleText.value = "";
 }
 
 
