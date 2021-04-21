@@ -35,22 +35,28 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
 
 function authorSearch(event){
     event.preventDefault();
-    console.log("authorsearch");
+    var authorText = document.getElementById("authorText");
+    var authorVal = authorText.value.trim();
+    var searchText = "inauthor:" + authorVal;
+    bookSearch(searchText);
 }
 
 function subjectSearch(event){
     event.preventDefault();
-    console.log("subjectSearch");
+    var subjectText = document.getElementById("subjectText");
+    var subjectVal = subjectText.value.trim();
+    var searchText = "subject:" + subjectVal;
+    bookSearch(searchText);
 }
 
 function titleSearch (event){
     event.preventDefault();
-    console.log("titleSearch");
+    var titleText = document.getElementById("titleText");
+    var titleVal = titleText.value.trim();
+    var searchText = "intitle:" + titleVal;
+    bookSearch(searchText);
 }
-// $('#author').on("submit", function(event){
-//     event.preventDefault();
-//     console.log("authorsearch");
-// })
+
 
 
 authorEl.addEventListener("click", authorSearch);
