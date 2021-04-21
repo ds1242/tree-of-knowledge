@@ -1,4 +1,6 @@
-
+var authorEl = document.getElementById('author');
+var titleEl = document.getElementById('title');
+var subjectEl = document.getElementById('subject');
 // use google book api to pull data based on search term
 function bookSearch (searchTerm){
     var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm;
@@ -29,5 +31,18 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     console.log(title, subtitle, author, pageCount,publishDate);
 }
 
-bookSearch('intitle:Hobbit');
+function titleSearch(event){
+    event.preventDefault();
+    console.log("titleSearch");
+}
+
+function authorSearch(event){
+    event.preventDefault();
+    console.log("authorsearch");
+}
+
+function subjectSearch(event){
+    event.preventDefault();
+    console.log("subjectSearch");
+}
 
