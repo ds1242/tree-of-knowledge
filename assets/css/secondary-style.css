@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #bfcba8;
+    --secondary-color: #5b8a72;
+    --tertiary-color:#464f41;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    font-size: 100px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.results-list {
+    padding-bottom: 50%;
+}
