@@ -66,16 +66,17 @@ label {
 
 /* card styling */
 .card{
-    text-align: top;
+    text-align: center;
     background-color: var(--secondary-color);
+    border: 3px solid black;
+    border-radius: 15px;
 }
 .card-divider{
-    align-items: center;
+    text-align: center;
     background-color: var(--tertiary-color);
     color:var(--primary-color);
 }
-
 .card-section{
-    text-align: center;
+    text-align: left;
     color:var(--primary-color);
 }

@@ -45,8 +45,11 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     // create div to title of card
     var cardTitle = document.createElement('div');
     cardTitle.className = 'card-divider';
-    cardTitle.textContent = title;
     card.appendChild(cardTitle);
+    var cardHead = document.createElement('h4');
+    cardHead.textContent = title;
+    cardTitle.appendChild(cardHead);
+    
 
 
     // create div of card content
@@ -55,7 +58,6 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     card.appendChild(cardBody);
     // sometimes subtitle does not exist, this will only load the information if it is not undefined
     if(typeof subtitle !== 'undefined'){
-        console.log(subtitle)
         var pSubtitle = document.createElement('p');
         pSubtitle.textContent = subtitle;
         cardBody.appendChild(pSubtitle);
@@ -72,6 +74,15 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     var pDate = document.createElement('p');
     pDate.textContent = "Published: " + publishDate;
     cardBody.appendChild(pDate);
+
+    var wishListButton = document.createElement('button')
+    wishListButton.classList.add('button')
+    wishListButton.setAttribute('type','submit')
+    wishListButton.setAttribute('id', 'wish-list-add')
+    wishListButton.textContent = 'Add to Wishlist'
+    
+    cardBody.appendChild(wishListButton);
+
 
 }
 
