@@ -64,6 +64,18 @@ label {
     padding:10px;
 }
 
-/* .grid-padding-y{
-    padding:10px;
-} */
+/* card styling */
+.card{
+    text-align: top;
+    background-color: var(--secondary-color);
+}
+.card-divider{
+    text-align: center;
+    background-color: var(--tertiary-color);
+    color:var(--primary-color);
+}
+
+.card-section{
+    text-align: center;
+    color:var(--primary-color);
+}
