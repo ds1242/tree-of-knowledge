@@ -21,6 +21,7 @@
 h1 {
     font-size: 100px;
     color: var(--secondary-color);
+    text-decoration: none;
 }
 
 .button {
@@ -35,7 +36,7 @@ label {
 
 }
 
-.input, .found-books {
+.input, .found-books, .results {
    border: 8px solid var(--tertiary-color);
    background-color: var(--secondary-color);
    text-align: center;
@@ -59,4 +60,3 @@ label {
 .column{
     border:2px solid var(--tertiary-color);
 }
-
