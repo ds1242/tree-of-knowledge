@@ -6,9 +6,12 @@ function bookSearch (searchTerm){
     var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm;
     // user url to search
     fetch(bookUrl)
-    .then(function(response){
- 
-        return response.json();
+    .then(function(response){ 
+        if(response.ok){
+            return response.json();
+        } else {
+            alert("Error: " + response.statusText);
+        }
     })   
     .then(function(data){
         $('#foundBooks').empty();
@@ -22,46 +25,64 @@ function bookSearch (searchTerm){
             displayBookInfo(author, pageCount, publishDate, title, subtitle)
         }        
     })
+    .catch(function(error){        
+        console.log("Unable to connect to find books")
+    });
 }
 
 function displayBookInfo(author, pageCount, publishDate, title, subtitle){
-    
+    // get found books section
     var bookList = document.getElementById("foundBooks");
     var cardCol = document.createElement('div');
-    cardCol.classList.add("column", "small-6")
+    cardCol.classList.add("cell", "medium-6", "grid-padding-y", "grid-padding-x")
     bookList.appendChild(cardCol);
-
+    
+    // create div to hold card
     var card = document.createElement('div');
     card.className = 'card';
     
-    cardCol.append(card)
-
+    cardCol.appendChild(card)
+    // create div to title of card
     var cardTitle = document.createElement('div');
     cardTitle.className = 'card-divider';
-    cardTitle.textContent = title;
     card.appendChild(cardTitle);
+    var cardHead = document.createElement('h4');
+    cardHead.textContent = title;
+    cardTitle.appendChild(cardHead);
+    
 
 
-
+    // create div of card content
     var cardBody = document.createElement('div');
-    cardBody.className = 'car-section';
+    cardBody.className = 'card-section';
     card.appendChild(cardBody);
-
-    var pSubtitle = document.createElement('p');
-    pSubtitle.textContent = subtitle;
-    card.appendChild(pSubtitle);
+    // sometimes subtitle does not exist, this will only load the information if it is not undefined
+    if(typeof subtitle !== 'undefined'){
+        var pSubtitle = document.createElement('p');
+        pSubtitle.textContent = subtitle;
+        cardBody.appendChild(pSubtitle);
+    }
 
     var pAuthor = document.createElement('p');
     pAuthor.textContent = "Written by: " + author;
-    card.appendChild(pAuthor);
+    cardBody.appendChild(pAuthor);
     
     var pPageCount = document.createElement('p');
     pPageCount.textContent = "Number of Pages: " + pageCount;
-    card.appendChild(pPageCount);
+    cardBody.appendChild(pPageCount);
 
     var pDate = document.createElement('p');
     pDate.textContent = "Published: " + publishDate;
-    card.appendChild(pDate);
+    cardBody.appendChild(pDate);
+
+    var wishListButton = document.createElement('button')
+    wishListButton.classList.add('button')
+    wishListButton.setAttribute('type','submit')
+    wishListButton.setAttribute('id', 'wish-list-add')
+    wishListButton.textContent = 'Add to Wishlist'
+    
+    cardBody.appendChild(wishListButton);
+
 
 }
 
