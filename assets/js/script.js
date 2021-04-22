@@ -1,4 +1,3 @@
-var googleBookKey = 'AIzaSyA87lRRkp_fiRnysl5X0N7eRVo9V85IngU'
 var authorEl = document.getElementById('author');
 var titleEl = document.getElementById('title');
 var subjectEl = document.getElementById('subject');
@@ -6,7 +5,7 @@ var wishListButton = document.querySelector('#wish-list-add');
 var storageObj = {}
 // use google book api to pull data based on search term
 function bookSearch (searchTerm){
-    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&maxResults=40&Key=' + googleBookKey;
+    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&maxResults=40';
     // user url to search
     fetch(bookUrl)
     .then(function(response){ 
