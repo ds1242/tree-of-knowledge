@@ -42,8 +42,10 @@ label {
 }
 
 .input {
-    background-image: url("../images/bookworm.jpg");
-    background-size: 1100px 500px;
+        background-image: url("../images/photo-1481627834876-b7833e8f5570.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: center;
 }
 
 /* placeholder for list */
