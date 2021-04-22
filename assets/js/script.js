@@ -28,7 +28,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     
     var bookList = document.getElementById("foundBooks");
     var cardCol = document.createElement('div');
-    cardCol.classList.add("column", "small-6")
+    cardCol.classList.add("cell", "small-6", "grid-padding-y", "grid-padding-x")
     bookList.appendChild(cardCol);
 
     var card = document.createElement('div');

@@ -60,3 +60,10 @@ label {
     border:2px solid var(--tertiary-color);
 }
 
+.grid-padding-x{
+    padding:10px;
+}
+
+/* .grid-padding-y{
+    padding:10px;
+} */
