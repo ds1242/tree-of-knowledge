@@ -1,5 +1,60 @@
+:root {
+    --primary-color: #bfcba8;
+    --secondary-color: #5b8a72;
+    --tertiary-color:#464f41;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.head, .foot, .head-nav {
+    justify-content: space-around;
+    text-align: center;
+    height: 150px;
+    background-color: var(--primary-color);
+}
+
+
+h1 {
+    font-size: 100px;
+    color: var(--secondary-color);
+}
+
+.button {
+    border: 3px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background-color: var(--tertiary-color);
+}
+
+label {
+    font-size: 25px;
+
+}
+
+.input, .found-books {
+   border: 8px solid var(--tertiary-color);
+   background-color: var(--secondary-color);
+   text-align: center;
+}
+
+.input {
+    background-image: url("../images/bookworm.jpg");
+    background-size: 1100px 500px;
+}
+
+/* placeholder for list */
+.books-list {
+    border: 4px solid var(--tertiary-color);
+    background-color: var(--primary-color);
+    /* margin: 10%; */
+    text-align: center;
+}
+
+.column{
+    border:2px solid var(--tertiary-color);
+}
+

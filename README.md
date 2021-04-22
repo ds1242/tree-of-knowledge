@@ -2,6 +2,7 @@
 
 #https://mackfolds.github.io/tree-of-knowledge/
 
+<<<<<<< HEAD
 #git@github.com:MackFolds/tree-of-knowledge.git
 <<<<<<< HEAD
 =======

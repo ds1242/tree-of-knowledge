@@ -6,71 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tree of Knowledge</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/js/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1 class="head">Tree Of Knowledge</h1>
-        <!-- place holder nav bar my need to change some to links for the wish list page -->
+    <header class="head">
+        <h1 >Tree Of Knowledge</h1>
+      </header>
+      <!-- place holder nav bar my need to change some to links for the wish list page -->
         <nav class="head-nav">
-            <ul class="menu align-center">
-                <li>
-                    <a class="button" href="#">Featured</a>
-                </li>
-                <li>
-                    <a class="button" href="#">Recent Search</a>
-                </li>
-                <li>
-                    <a class="button" href="#">Wishlist</a>
-                </li>
-            </ul>
+          <ul class="menu align-spaced">
+            <li>
+              <a class="button" href="#">Featured</a>
+            </li>
+            <li>
+              <a class="button" href="#">Recent Search</a>
+            </li>
+            <li>
+              <a class="button" href="#">Wishlist</a>
+            </li>
+          </ul>
         </nav>
-    </header>
-
-        <form>
-            <div class="grid-container">
-              <div class="grid-x grid-padding-x">
-                <div class="medium-6 cell">
-                  <label class="form-text">Author:
-                    <input type="text" placeholder="Author">
-                  </label>
-                </div>
-          </form>
-        <form>
-            <div class="grid-container">
-              <div class="grid-x grid-padding-x">
-                <div class="medium-6 cell">
-                  <label class="form-text">Title:
-                    <input type="text" placeholder="Title">
-                  </label>
-                </div>
-          </form>
-      <!-- </form> -->
+        
+        <section class="input align-center">
+          <div class="grid-x grid-padding-x align-center">
+            <!-- Aligned to the center --> 
+            <label class="cell medium-6 form-text" >Author:
+                <input type="text" id="authorText" placeholder="Betty Crocker" />
+                <input class="button" type="submit" id="author" value="Submit" />
+            </label>
+            
+          </div>
+          <div class="grid-x grid-padding-x align-center">
+            <!-- Aligned to the center --> 
+            <label class="cell medium-6 form-text">Title:
+                <input type="text" id="titleText" placeholder="Slow Cooking for Two" />
+                <input class="button" type="submit" id="title" value="Submit" />
+            
+          </div>
+          <div class="grid-x grid-padding-x align-center"> 
+            <!-- Aligned to the center -->
+            <label class="cell medium-6 form-text">Subject:
+                <input type="text" id="subjectText" placeholder="Classic Recipes" />
+                <input class="button" type="submit" id="subject" value="Submit" />
+            
+          </div>
+         </section>
+  
 
       <section class="found-books">
           <h2>Here are some books I have found!</h2>
-        <div id="foundBooks">
-            <!-- some type of card added with JavaScript will be added here -->
+            <div class="books-list row" id="foundBooks">
+            <!-- some type of card added with JavaScript will be added here -->            
 
-        </div>
+            </div>
       </section>
 
       <footer class="foot">
-          <div>
               <!-- page selection for the search goes here [<<][1][2][3][4][5][>>]  ect -->
-              <div class="primary button-group hollow no-gaps">
-                <a class="button"><span class="fi-chevron-left"></span></a>
+              <div>
+                <a class="button"><<</a>
                 <a class="button">1</a>
                 <a class="button">2</a>
                 <a class="button">3</a>
                 <a class="button">4</a>
                 <a class="button">5</a>
-                <a class="button"><span class="fi-chevron-right"></span></a>
+                <a class="button">>></a>
                 </div>
-          </div>
-          <!-- second nav bar for bottom of page in case we increase the amount of books per page -->
-         
       </footer>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
       <script src="./assets/js/script.js"></script>
 </body>
 </html>
