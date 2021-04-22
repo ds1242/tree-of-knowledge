@@ -24,7 +24,7 @@ function bookSearch (searchTerm){
             var title = data.items[i].volumeInfo.title;
             var subtitle = data.items[i].volumeInfo.subtitle;            
             //function to display information 
-            displayBookInfo(author, pageCount, publishDate, title, subtitle, i)
+            displayBookInfo(author, pageCount, publishDate, title, subtitle)
         }        
     })
     .catch(function(error){        
@@ -32,7 +32,7 @@ function bookSearch (searchTerm){
     });
 }
 
-function displayBookInfo(author, pageCount, publishDate, title, subtitle, i){
+function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     // get found books section
     var bookList = document.getElementById("foundBooks");
     var cardCol = document.createElement('div');
@@ -91,8 +91,10 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle, i){
 }
 
 function addWishList (){
-    var title = $('#card-divider').closest().innerHTML;
-    console.log(title);
+    // var title = document.getElementById('card-head').closest('h4').innerHTML;
+    var card = event.target.parentNode.parentNode;
+    console.log(card);
+    
 
 }
 
