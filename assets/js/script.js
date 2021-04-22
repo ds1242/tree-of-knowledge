@@ -1,6 +1,8 @@
 var authorEl = document.getElementById('author');
 var titleEl = document.getElementById('title');
 var subjectEl = document.getElementById('subject');
+var wishListButton = document.querySelector('#wish-list-add');
+var storageObj = {}
 // use google book api to pull data based on search term
 function bookSearch (searchTerm){
     var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm;
@@ -22,7 +24,7 @@ function bookSearch (searchTerm){
             var title = data.items[i].volumeInfo.title;
             var subtitle = data.items[i].volumeInfo.subtitle;            
             //function to display information 
-            displayBookInfo(author, pageCount, publishDate, title, subtitle)
+            displayBookInfo(author, pageCount, publishDate, title, subtitle, i)
         }        
     })
     .catch(function(error){        
@@ -30,7 +32,7 @@ function bookSearch (searchTerm){
     });
 }
 
-function displayBookInfo(author, pageCount, publishDate, title, subtitle){
+function displayBookInfo(author, pageCount, publishDate, title, subtitle, i){
     // get found books section
     var bookList = document.getElementById("foundBooks");
     var cardCol = document.createElement('div');
@@ -47,6 +49,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     cardTitle.className = 'card-divider';
     card.appendChild(cardTitle);
     var cardHead = document.createElement('h4');
+    cardHead.setAttribute('id', 'card-head');
     cardHead.textContent = title;
     cardTitle.appendChild(cardHead);
     
@@ -75,6 +78,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     pDate.textContent = "Published: " + publishDate;
     cardBody.appendChild(pDate);
 
+    
     var wishListButton = document.createElement('button')
     wishListButton.classList.add('button')
     wishListButton.setAttribute('type','submit')
@@ -83,10 +87,14 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     
     cardBody.appendChild(wishListButton);
 
-
+    wishListButton.addEventListener('click', addWishList);
 }
 
+function addWishList (){
+    var title = $('#card-divider').closest().innerHTML;
+    console.log(title);
 
+}
 
 function authorSearch(event){
     event.preventDefault();
