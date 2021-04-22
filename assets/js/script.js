@@ -5,7 +5,7 @@ var wishListButton = document.querySelector('#wish-list-add');
 var storageObj = {}
 // use google book api to pull data based on search term
 function bookSearch (searchTerm){
-    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm;
+    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&maxResults=40';
     // user url to search
     fetch(bookUrl)
     .then(function(response){ 
