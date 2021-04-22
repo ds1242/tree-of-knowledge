@@ -70,7 +70,7 @@ label {
     background-color: var(--secondary-color);
 }
 .card-divider{
-    text-align: center;
+    align-items: center;
     background-color: var(--tertiary-color);
     color:var(--primary-color);
 }
