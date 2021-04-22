@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tree of Knowledge</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -28,16 +29,26 @@
         </nav>
         
         <section class="input align-center">
-          <div class="grid-x grid-padding-x align-center"> <!-- Aligned to the center -->
-            <label class="cell medium-6 form-text">Author:<input type="text" placeholder="Betty Crocker"><a class="button" href="#">Submit</a></label>
+          <div class="grid-x grid-padding-x align-center">
+            <!-- Aligned to the center --> 
+            <label class="cell medium-6 form-text" >Author:
+                <input type="text" id="authorText" placeholder="Betty Crocker" />
+                <input class="button" type="submit" id="author" value="Submit" />
+            </label>
             
           </div>
-          <div class="grid-x grid-padding-x align-center"> <!-- Aligned to the center -->
-            <label class="cell medium-6 form-text">Title:<input type="text" placeholder="Slow Cooking for Two"><a class="button" href="#">Submit</a></label>
+          <div class="grid-x grid-padding-x align-center">
+            <!-- Aligned to the center --> 
+            <label class="cell medium-6 form-text">Title:
+                <input type="text" id="titleText" placeholder="Slow Cooking for Two" />
+                <input class="button" type="submit" id="title" value="Submit" />
             
           </div>
-          <div class="grid-x grid-padding-x align-center"> <!-- Aligned to the center -->
-            <label class="cell medium-6 form-text">Subject:<input type="text" placeholder="Classic Recipes"><a class="button" href="#">Submit</a></label>
+          <div class="grid-x grid-padding-x align-center"> 
+            <!-- Aligned to the center -->
+            <label class="cell medium-6 form-text">Subject:
+                <input type="text" id="subjectText" placeholder="Classic Recipes" />
+                <input class="button" type="submit" id="subject" value="Submit" />
             
           </div>
          </section>
@@ -45,10 +56,10 @@
 
       <section class="found-books">
           <h2>Here are some books I have found!</h2>
-        <div class="books-list" id="foundBooks">
-            <!-- some type of card added with JavaScript will be added here -->
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod fuga harum aliquid delectus, sequi id animi reprehenderit culpa alias aut repellendus odio nostrum! Hic, quo necessitatibus aliquam debitis blanditiis dolorem.
-        </div>
+            <div class="books-list row" id="foundBooks">
+            <!-- some type of card added with JavaScript will be added here -->            
+
+            </div>
       </section>
 
       <footer class="foot">
@@ -65,6 +76,7 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod fuga harum aliqui
       </footer>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
       <script src="./assets/js/script.js"></script>
 </body>
 </html>
