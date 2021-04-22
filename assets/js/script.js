@@ -104,4 +104,6 @@ titleEl.addEventListener("click", titleSearch);
 subjectEl.addEventListener("click", subjectSearch);
 
 
-
+fetch ('https://api.mapbox.com/geocoding/v5/mapbox.places/bookstores.json?api_key=pk.eyJ1IjoidHJleWZvbGRzOTMiLCJhIjoiY2tuczgwaHQwMGZkZzJwcm9tZ2xxZHpwaSJ9.9azPNr7sGtqlVg80AFCznA') .then(function(response){
+    console.log(response);
+});

@@ -58,3 +58,4 @@ label {
     border:2px solid var(--tertiary-color);
 }
 
+#mapid { height: 180px; }

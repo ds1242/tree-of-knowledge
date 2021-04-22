@@ -8,8 +8,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" type="text/css" crossorigin="">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" crossorigin=""></script>
+      <style>
+        #mapid {
+            width: 512px;
+            height: 512px;
+            border: 1px solid #ccc;
+        }
+
+        .leaflet-container {
+            background: #fff;
+        }
+      </style>
+       
+        <script type="text/javascript">
+          function init() {
+            // create map and set center and zoom level
+            var map = new L.map('mapid');
+            map.setView([47.000,-120.554],13);
+            
+            var mapboxTileUrl = 'PASTE YOUR URL INSIDE THESE SINGLE QUOTES';
+            
+            L.tileLayer(mapboxTileUrl, {
+                attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+            }).addTo(map);         
+          }  
+        </script> -->
 </head>
-<body>
+<body onload="init()">
     <header class="head">
         <h1 >Tree Of Knowledge</h1>
       </header>
@@ -62,6 +92,19 @@
             </div>
       </section>
 
+      <div id='map' style='width: 400px; height: 300px;'></div>
+      <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoidHJleWZvbGRzOTMiLCJhIjoiY2tuczgyc3VlMHNmdzMxbzlxbjFzODk2YyJ9.xrxmkbMeKgDK1Sukyd3PmQ';
+      var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+      });
+      </script> 
+        <!-- <h1 id="title">Favorite restaurants</h1>
+        <div id="mapid"></div>  -->
+        <!-- $ curl "https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoidHJleWZvbGRzOTMiLCJhIjoiY2tuczgyc3VlMHNmdzMxbzlxbjFzODk2YyJ9.xrxmkbMeKgDK1Sukyd3PmQ" -->
+      </div>
+
       <footer class="foot">
               <!-- page selection for the search goes here [<<][1][2][3][4][5][>>]  ect -->
               <div>
@@ -78,5 +121,18 @@
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
       <script src="./assets/js/script.js"></script>
+      <script>var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={pk.eyJ1IjoidHJleWZvbGRzOTMiLCJhIjoiY2tuczgyc3VlMHNmdzMxbzlxbjFzODk2YyJ9.xrxmkbMeKgDK1Sukyd3PmQ}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'your.mapbox.access.token'
+        }).addTo(mymap);</script>
+       <!-- for map -->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
 </body>
 </html>
