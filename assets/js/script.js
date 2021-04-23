@@ -2,10 +2,13 @@ var authorEl = document.getElementById('author');
 var titleEl = document.getElementById('title');
 var subjectEl = document.getElementById('subject');
 var wishListButton = document.querySelector('#wish-list-add');
-var storageObj = {}
+var authorTitleArr = JSON.parse(localStorage.getItem("authorTitleArr")) || []
+
+
+
 // use google book api to pull data based on search term
 function bookSearch (searchTerm){
-    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&maxResults=4';
+    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&maxResults=40';
     // user url to search
     fetch(bookUrl)
     .then(function(response){ 
@@ -54,10 +57,9 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     cardHead.className = 'card-head';
     cardHead.textContent = title;
     cardTitle.appendChild(cardHead);
-    
 
 
-    // create div of card content
+    // create div of card content and set title at top
     var cardBody = document.createElement('div');
     cardBody.className = 'card-section';
     cardBody.setAttribute('title',title);
@@ -68,7 +70,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
         pSubtitle.textContent = subtitle;
         cardBody.appendChild(pSubtitle);
     }
-
+    // display book information on card
     var pAuthor = document.createElement('p');
     pAuthor.textContent = "Written by: " + author;
     cardBody.appendChild(pAuthor);
@@ -81,7 +83,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     pDate.textContent = "Published: " + publishDate;
     cardBody.appendChild(pDate);
 
-    
+    // create wishlist buttons on cards
     var wishListButton = document.createElement('button')
     wishListButton.classList.add('button');
     wishListButton.setAttribute('type','submit');
@@ -95,54 +97,56 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
 }
 
 function addWishList (){
-    // var titleVal= document.getElementById('card-head').closest('h4').innerHTML; // this one pulls title value but needs to identify location
-    // var titleVal= $('.card-head').html().index();
+    // get title and author name from id's attached to the cards
     var titleVal = $(this).parent().attr('title');
-    var newVal = $(this).attr('author');
-    // var head = document.getElementById('card');
-    // var titleVal = $('.card-head').index().target;
-    // var card = $('.card-head').target.value
-    // var titleVal = $(event.target).closest('h4').html;
-    // title = card.getElementById('card-head').value;
-    console.log(titleVal);
-    console.log(newVal);
-    // console.log(title);
-    
+    var authorVal = $(this).attr('author');
+    // set title and author to a temp object
+    var tempObj = {titleVal, authorVal};
+    // push that object to local storage array
+    authorTitleArr.push(tempObj)
+    // save array to local storage
+    localStorage.setItem('authorTitleArr', JSON.stringify(authorTitleArr));   
 
 }
 
 function authorSearch(event){
     event.preventDefault();
+    // get text input from user
     var authorText = document.getElementById("authorText");
     var authorVal = authorText.value.trim();
+    // set search parameters needed for api
     var searchText = "inauthor:" + authorVal;
     bookSearch(searchText);
-
+    // reset search box to empty
     authorText.value = "";
 }
 
 function subjectSearch(event){
     event.preventDefault();
+    // get text input from user
     var subjectText = document.getElementById("subjectText");
     var subjectVal = subjectText.value.trim();
+    // set search parameter for subject
     var searchText = "subject:" + subjectVal;
     bookSearch(searchText);
-
+    // clear input box
     subjectText.value = "";
 }
 
 function titleSearch (event){
     event.preventDefault();
+    // get input from user
     var titleText = document.getElementById("titleText");
     var titleVal = titleText.value.trim();
+    // set search parameter and search google books api
     var searchText = "intitle:" + titleVal;
     bookSearch(searchText);
-
+    // clear input
     titleText.value = "";
 }
 
 
-
+// event listeners for search buttons
 authorEl.addEventListener("click", authorSearch);
 titleEl.addEventListener("click", titleSearch);
 subjectEl.addEventListener("click", subjectSearch);
