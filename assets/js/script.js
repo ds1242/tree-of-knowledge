@@ -60,7 +60,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     // create div of card content
     var cardBody = document.createElement('div');
     cardBody.className = 'card-section';
-    cardBody.setAttribute('id',title);
+    cardBody.setAttribute('title',title);
     card.appendChild(cardBody);
     // sometimes subtitle does not exist, this will only load the information if it is not undefined
     if(typeof subtitle !== 'undefined'){
@@ -83,10 +83,11 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
 
     
     var wishListButton = document.createElement('button')
-    wishListButton.classList.add('button')
-    wishListButton.setAttribute('type','submit')
-    wishListButton.setAttribute('id', 'wish-list-add')
-    wishListButton.textContent = 'Add to Wishlist'
+    wishListButton.classList.add('button');
+    wishListButton.setAttribute('type','submit');
+    wishListButton.setAttribute('id', 'wish-list-add');
+    wishListButton.setAttribute('author', author);
+    wishListButton.textContent = 'Add to Wishlist';
     
     cardBody.appendChild(wishListButton);
 
@@ -96,13 +97,15 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
 function addWishList (){
     // var titleVal= document.getElementById('card-head').closest('h4').innerHTML; // this one pulls title value but needs to identify location
     // var titleVal= $('.card-head').html().index();
-    var titleVal = $(this).parent().attr('id');
+    var titleVal = $(this).parent().attr('title');
+    var newVal = $(this).attr('author');
     // var head = document.getElementById('card');
     // var titleVal = $('.card-head').index().target;
     // var card = $('.card-head').target.value
     // var titleVal = $(event.target).closest('h4').html;
     // title = card.getElementById('card-head').value;
     console.log(titleVal);
+    console.log(newVal);
     // console.log(title);
     
 
