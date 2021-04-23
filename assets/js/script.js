@@ -50,6 +50,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     card.appendChild(cardTitle);
     var cardHead = document.createElement('h4');
     cardHead.setAttribute('id', 'card-head');
+    cardHead.className = 'card-head';
     cardHead.textContent = title;
     cardTitle.appendChild(cardHead);
     
@@ -91,9 +92,15 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
 }
 
 function addWishList (){
-    // var title = document.getElementById('card-head').closest('h4').innerHTML;
-    var card = event.target.parentNode.parentNode;
-    console.log(card);
+    // var titleVal= document.getElementById('card-head').closest('h4').innerHTML; // this one pulls title value but needs to identify location
+    // var titleVal= document.getElementById('card-head').closest('h4').innerHTML;
+    // var head = document.getElementById('card');
+    var titleVal = $('#card-head').index(this);
+    // var card = $('.card-head').target.value
+    // var titleVal = $(event.target).closest('h4').html;
+    // title = card.getElementById('card-head').value;
+    console.log(titleVal);
+    // console.log(title);
     
 
 }
