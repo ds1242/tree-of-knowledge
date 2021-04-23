@@ -5,7 +5,7 @@ var wishListButton = document.querySelector('#wish-list-add');
 var storageObj = {}
 // use google book api to pull data based on search term
 function bookSearch (searchTerm){
-    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&maxResults=40';
+    var bookUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + searchTerm + '&maxResults=4';
     // user url to search
     fetch(bookUrl)
     .then(function(response){ 
@@ -42,6 +42,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     // create div to hold card
     var card = document.createElement('div');
     card.className = 'card';
+    card.setAttribute('id', 'test-id')
     
     cardCol.appendChild(card)
     // create div to title of card
@@ -59,6 +60,7 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     // create div of card content
     var cardBody = document.createElement('div');
     cardBody.className = 'card-section';
+    cardBody.setAttribute('id',title);
     card.appendChild(cardBody);
     // sometimes subtitle does not exist, this will only load the information if it is not undefined
     if(typeof subtitle !== 'undefined'){
@@ -93,9 +95,10 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
 
 function addWishList (){
     // var titleVal= document.getElementById('card-head').closest('h4').innerHTML; // this one pulls title value but needs to identify location
-    // var titleVal= document.getElementById('card-head').closest('h4').innerHTML;
+    // var titleVal= $('.card-head').html().index();
+    var titleVal = $(this).parent().attr('id');
     // var head = document.getElementById('card');
-    var titleVal = $('#card-head').index(this);
+    // var titleVal = $('.card-head').index().target;
     // var card = $('.card-head').target.value
     // var titleVal = $(event.target).closest('h4').html;
     // title = card.getElementById('card-head').value;
