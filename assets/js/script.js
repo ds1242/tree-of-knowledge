@@ -23,7 +23,8 @@ function bookSearch (searchTerm){
             var subtitle = data.items[i].volumeInfo.subtitle;            
             //function to display information 
             displayBookInfo(author, pageCount, publishDate, title, subtitle)
-        }        
+        }  
+        console.log(data);      
     })
     .catch(function(error){        
         console.log("Unable to connect to find books")
