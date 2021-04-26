@@ -90,6 +90,9 @@ function displayBookInfo(author, pageCount, publishDate, title, subtitle){
     wishListButton.setAttribute('type','submit');
     wishListButton.setAttribute('id', 'wish-list-add');
     wishListButton.setAttribute('author', author);
+    wishListButton.setAttribute('subtitle', subtitle);
+    wishListButton.setAttribute('page-count', pageCount);
+    wishListButton.setAttribute('publish-date', publishDate);
     wishListButton.textContent = 'Add to Wishlist';
     
     cardBody.appendChild(wishListButton);
@@ -101,8 +104,11 @@ function addWishList (){
     // get title and author name from id's attached to the cards
     var titleVal = $(this).parent().attr('title');
     var authorVal = $(this).attr('author');
+    var subtitleVal = $(this).attr('subtitle');
+    var publishDateVal = $(this).attr('publish-date');
+    var pageCountVal = $(this).attr('page-count');
     // set title and author to a temp object
-    var tempObj = {titleVal, authorVal};
+    var tempObj = {titleVal, subtitleVal, authorVal, publishDateVal,pageCountVal};
     // push that object to local storage array
     authorTitleArr.push(tempObj)
     // save array to local storage
