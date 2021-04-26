@@ -2,6 +2,7 @@ var authorEl = document.getElementById('author');
 var titleEl = document.getElementById('title');
 var subjectEl = document.getElementById('subject');
 var wishListButton = document.querySelector('#wish-list-add');
+
 var authorTitleArr = JSON.parse(localStorage.getItem("authorTitleArr")) || []
 
 
@@ -151,6 +152,7 @@ function titleSearch (event){
     // clear input
     titleText.value = "";
 }
+
 
 
 
