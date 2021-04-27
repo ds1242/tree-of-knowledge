@@ -2,6 +2,7 @@ var authorEl = document.getElementById('author');
 var titleEl = document.getElementById('title');
 var subjectEl = document.getElementById('subject');
 var wishListButton = document.querySelector('#wish-list-add');
+
 var authorTitleArr = JSON.parse(localStorage.getItem("authorTitleArr")) || []
 
 
@@ -28,7 +29,8 @@ function bookSearch (searchTerm){
             var subtitle = data.items[i].volumeInfo.subtitle;            
             //function to display information 
             displayBookInfo(author, pageCount, publishDate, title, subtitle)
-        }        
+        }  
+        console.log(data);      
     })
     .catch(function(error){        
         console.log("Unable to connect to find books")
@@ -150,6 +152,7 @@ function titleSearch (event){
     // clear input
     titleText.value = "";
 }
+
 
 
 
