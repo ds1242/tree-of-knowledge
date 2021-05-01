@@ -63,15 +63,16 @@
 
             </div>
       </section>
-
-      <div class='sidebar'>
-        <div class='heading'>
-          <h1>Our locations</h1>
-        </div>
-        <div id='listings' class='listings'></div>
-      </div>
-      <div id="map" class="map"></div>
-
+      <!-- map starts here -->
+      <section class="map-container">
+        <div class='sidebar'>
+          <div class='heading'>
+            <h1>Our locations</h1>
+          </div>
+            <div id='listings' class='listings'></div>
+          </div>
+        <div id="map" class="map"></div>
+     </section>
 
 
       <footer class="foot">
@@ -90,16 +91,6 @@
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
       <script src="./assets/js/script.js"></script>
-      <!-- <script>var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={pk.eyJ1IjoidHJleWZvbGRzOTMiLCJhIjoiY2tuczgyc3VlMHNmdzMxbzlxbjFzODk2YyJ9.xrxmkbMeKgDK1Sukyd3PmQ}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
-            id: 'mapbox/streets-v11',
-            tileSize: 512,
-            zoomOffset: -1,
-            accessToken: 'sk.eyJ1IjoidGVsbGVyd2V0emVsIiwiYSI6ImNrbnh6b3EwZzE0cXMycHFxYXE3aG03dTgifQ.wHhKVJv_Mscbf_jirk9GXA'
-        }).addTo(mymap);</script> -->
-       <!-- for map -->
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""></script>

@@ -102,6 +102,8 @@ function titleSearch (event){
 authorEl.addEventListener("click", authorSearch);
 titleEl.addEventListener("click", titleSearch);
 subjectEl.addEventListener("click", subjectSearch);
+// start map
+
 
 var stores = {
     "type": "FeatureCollection",
