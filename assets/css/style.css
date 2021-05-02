@@ -60,13 +60,6 @@ label {
 
 #mapid { height: 180px; }
 
-
-
-
-
-      
-
-
 h4 {
   font-size: 22px;
   margin: 0;
@@ -116,7 +109,7 @@ gets 2/3 of the page. You can adjust this to your personal liking. */
   .map-container {
     align-items: center;
     position: relative;
-    height: 800px;
+    height: 400px;
     width: 100%;
   }
   .listings .item {
@@ -136,14 +129,37 @@ gets 2/3 of the page. You can adjust this to your personal liking. */
   
   .listings .item .title small { font-weight: 400; }
   
+
+  
   .listings .item.active .title,
   .listings .item .title:hover { color: #8cc63f; }
   
   .listings .item.active {
     background-color: #f8f8f8;
   }
-  .listings {
-    height: 100%;
-    overflow: auto;
-    padding-bottom: 60px;
+  
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00853e;
+    border-radius: 0;
+  }
+  
+  .clearfix { display: block; }
+  
+  .clearfix::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
   }

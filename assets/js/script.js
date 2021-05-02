@@ -122,7 +122,8 @@ var stores = {
     "foursquare": "4c7019b3d7fab1f7f5605dc9",
     "landmark": true,
     "address": "135 N 545 W",
-    "category": "bookstore, book shop, shop"
+    "category": "bookstore, book shop, shop",
+    "text": "Deseret Book"
     },
     "text": "Deseret Book",
     "place_name": "Deseret Book, 135 N 545 W, West Bountiful, Utah 84010, United States",
@@ -180,6 +181,7 @@ var stores = {
     "foursquare": "4b5e649cf964a520d98c29e3",
     "landmark": true,
     "address": "340 S 500 W",
+    "text": "Barnes & Noble",
     "category": "bookstore, book shop, shop"
     },
     "text": "Barnes & Noble",
@@ -238,6 +240,7 @@ var stores = {
     "foursquare": "4b0586a7f964a520426922e3",
     "landmark": true,
     "address": "510 Main St",
+    "text": "Dolly's Bookstore",
     "category": "bookstore, book shop, shop"
     },
     "text": "Dolly's Bookstore",
@@ -297,6 +300,7 @@ var stores = {
     "foursquare": "4ad4f291f964a52028fe20e3",
     "landmark": true,
     "address": "1511 S 1500 E",
+    "text": "The King's English Bookshop",
     "category": "bookstore, book shop, shop"
     },
     "text": "The King's English Bookshop",
@@ -356,7 +360,8 @@ var stores = {
     "foursquare": "4ad4f291f964a5202afe20e3",
     "landmark": true,
     "address": "151 S 500 E",
-    "category": "bookstore, book shop, shop"
+    "category": "bookstore, book shop, shop",
+    "text": "Golden Braid Bookstore"
     },
     "text": "Golden Braid Bookstore",
     "place_name": "Golden Braid Bookstore, 151 S 500 E, Salt Lake City, Utah 84102, United States",
@@ -421,4 +426,44 @@ var stores = {
             "data": stores
           }
         });
+        buildLocationList(stores);
       });
+
+      function buildLocationList(data) {
+        data.features.forEach(function(store, i){
+          /**
+           * Create a shortcut for `store.properties`,
+           * which will be used several times below.
+          **/
+          var prop = store.properties;
+      
+          /* Add a new listing section to the sidebar. */
+          var listings = document.getElementById('listings');
+          var listing = listings.appendChild(document.createElement('div'));
+          /* Assign a unique `id` to the listing. */
+          listing.id = "listing-" + data.features[i].properties.id;
+          /* Assign the `item` class to each listing for styling. */
+          listing.className = 'item';
+      
+          /* Add the link to the individual listing created above. */
+          var link = listing.appendChild(document.createElement('a'));
+          link.href = '#';
+          link.className = 'title';
+          link.id = "link-" + prop.id;
+          link.innerHTML = prop.text + "<br />" + prop.address;
+
+
+      
+          /* Add details to the individual listing. */
+        //   var details = listing.appendChild(document.createElement('div'));
+        //   details.innerHTML = prop.city;
+        //   if (prop.phone) {
+        //     details.innerHTML += ' · ' + prop.phoneFormatted;
+        //   }
+        //   if (prop.distance) {
+        //     var roundedDistance = Math.round(prop.distance * 100) / 100;
+        //     details.innerHTML +=
+        //       '<p><strong>' + roundedDistance + ' miles away</strong></p>';
+        //   }
+        });
+      }

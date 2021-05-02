@@ -64,17 +64,6 @@
 
             </div>
       </section>
-      <!-- map starts here -->
-      <section class="map-container">
-        <div class='sidebar'>
-          <div class='heading'>
-            <h4>Our locations</h1>
-          </div>
-            <div id='listings' class='listings'></div>
-          </div>
-        <div id="map" class="map"></div>
-     </section>
-
 
       <footer class="foot">
               <!-- page selection for the search goes here [<<][1][2][3][4][5][>>]  ect -->
@@ -87,6 +76,18 @@
                 <a class="button">5</a>
                 <a class="button">>></a>
                 </div>
+
+                      <!-- map starts here -->
+      <section class="map-container">
+        <div class='sidebar'>
+          <div class='heading'>
+            <h4>Local Book stores near you!</h1>
+          </div>
+            <div id='listings' class='listings'></div>
+          </div>
+        <div id="map" class="map"></div>
+     </section>
+     
       </footer>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
@@ -102,7 +103,7 @@
       container: 'map', // container id
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-111.5531, 40.9218479], // starting position
-      zoom: 7, // starting zoom
+      zoom:9, // starting zoom
       });
 
       // Add geolocate control to the map.
