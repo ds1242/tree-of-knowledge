@@ -16,7 +16,9 @@
     height: 150px;
     background-color: var(--primary-color);
 }
-
+.foot{
+  height: auto;
+}
 
 h1 {
     font-size: 100px;
@@ -111,12 +113,15 @@ gets 2/3 of the page. You can adjust this to your personal liking. */
     position: relative;
     height: 400px;
     width: 100%;
+    border: black solid 9px ;
+    padding: 5px;
   }
   .listings .item {
     display: block;
     border-bottom: 1px solid #eee;
     padding: 10px;
     text-decoration: none;
+    padding:2px;
   }
   
   .listings .item:last-child { border-bottom: none; }
@@ -163,3 +168,51 @@ gets 2/3 of the page. You can adjust this to your personal liking. */
     clear: both;
     visibility: hidden;
   }
+  /* Marker tweaks */
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  padding: 0;
+  width: 180px;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+
+.mapboxgl-popup-content h3 {
+  background: #91c949;
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  display: block;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
