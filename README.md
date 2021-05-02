@@ -40,10 +40,9 @@ Screenshot java script
 Screenshot java wish-list
 ![image](https://user-images.githubusercontent.com/79383305/116627503-802afc80-a90a-11eb-862a-308c2711585f.png)
 
-Built With HTML CSS  JavaScript Website https://mackfolds.github.io/tree-of-knowledge/ ; https://github.com/Teller35/
-
+Built With HTML CSS  JavaScript Website https://mackfolds.github.io/tree-of-knowledge/ ; https://github.com/Teller35/ ; https://github.com/MackFolds/ ; https://github.com/ds1242
+Presentation https://docs.google.com/presentation/d/179QKU49SHmUGAM-Nmu5aBky8s7ScATYvdxHUvlnt_h8/edit?usp=sharing
 Built with ❤️ by David Shaw, Mack Folds, Francis "Teller" Wetzel
-
 
 
 

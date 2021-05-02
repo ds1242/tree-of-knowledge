@@ -7,7 +7,11 @@
     <title>Tree of Knowledge</title>
     <link rel="icon" type="image/jpg" href="./assets/images/pile of books.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="./assets/css/style.css">
+    
+
 </head>
 <body>
     <header class="head">
@@ -64,11 +68,52 @@
       </section>
 
       <footer class="foot">
+      <!-- map starts here -->
+      <section class="map-container">
+        <div class='sidebar'>
+          <div class='heading'>
+            <h4>Local Book stores near you!</h1>
+          </div>
+            <div id='listings' class='listings'></div>
+          </div>
+        <div id="map" class="map"></div>
+     </section>
+     
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+      
+      <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidHJleWZvbGRzOTMiLCJhIjoiY2tuczgwaHQwMGZkZzJwcm9tZ2xxZHpwaSJ9.9azPNr7sGtqlVg80AFCznA';
+      var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-111.5531, 40.9218479], // starting position
+      zoom:9, // starting zoom
+      });
+
+      // Add geolocate control to the map.
+      map.addControl(
+      new mapboxgl.GeolocateControl({
+      positionOptions: {
+      enableHighAccuracy: true
+      },
+      trackUserLocation: true
+      })
+      );
+      </script>
+
           <h2 class="footh2">Brought to you by the Tree Of Knowledge Team!</h2>
           <div class="copy">&copy; 2021 David Shaw, Mack Folds, Teller Wetzel</div>  
       </footer>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+
       <script src="./assets/js/script.js"></script>
       <script src="./assets/js/homepage.js"></script>
 </body>
