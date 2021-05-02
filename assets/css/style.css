@@ -16,12 +16,28 @@
     height: 150px;
     background-color: var(--primary-color);
 }
+
 .foot{
   height: auto;
 }
 
+.head-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 h1 {
     font-size: 100px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footh2 {
+    color: var(--secondary-color);
+}
+
+.copy {
     color: var(--secondary-color);
 }
 
@@ -37,15 +53,17 @@ label {
 
 }
 
-.input, .found-books {
+.input, .found-books, .results {
    border: 8px solid var(--tertiary-color);
    background-color: var(--secondary-color);
    text-align: center;
 }
 
 .input {
-    background-image: url("../images/bookworm.jpg");
-    background-size: 1100px 500px;
+        background-image: url("../images/photo-1481627834876-b7833e8f5570.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: center;
 }
 
 /* placeholder for list */
@@ -59,6 +77,7 @@ label {
 .column{
     border:2px solid var(--tertiary-color);
 }
+
 
 #mapid { height: 180px; }
 
@@ -215,4 +234,25 @@ gets 2/3 of the page. You can adjust this to your personal liking. */
 
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
   border-bottom-color: #91c949;
+}
+
+.grid-padding-x{
+    padding:10px;
+}
+
+/* card styling */
+.card{
+    text-align: center;
+    background-color: var(--secondary-color);
+    border: 3px solid black;
+    border-radius: 15px;
+}
+.card-divider{
+    text-align: center;
+    background-color: var(--tertiary-color);
+    color:var(--primary-color);
+}
+.card-section{
+    text-align: left;
+    color:var(--primary-color);
 }
