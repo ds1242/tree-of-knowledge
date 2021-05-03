@@ -153,14 +153,7 @@ function titleSearch (event){
     titleText.value = "";
 }
 
-
-
-
-
-
-
 // start map //
-
 
 var stores = {
     "type": "FeatureCollection",
