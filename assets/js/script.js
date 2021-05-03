@@ -470,7 +470,7 @@ function titleSearch (event){
       }
     })   
     .then(function(stores){
-      console.log(stores)
+      
       stores.features.forEach(function(store, i){
         store.properties.id = i;
       });
@@ -559,10 +559,10 @@ function titleSearch (event){
         var popUps = document.getElementsByClassName('mapboxgl-popup');
         /** Check if there is already a popup on the map and if so, remove it */
         if (popUps[0]) popUps[0].remove();
-      
+        
         var popup = new mapboxgl.Popup({ closeOnClick: false })
           .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3>' +  currentFeature.properties.text + '</h3>' +
+          .setHTML('<h3>' +  currentFeature.text + '</h3>' +
             '<h4>' + currentFeature.properties.address + '</h4>')
           .addTo(map);
       }
