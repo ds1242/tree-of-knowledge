@@ -34,11 +34,17 @@ h1 {
 }
 
 .footh2 {
-    color: var(--secondary-color);
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .copy {
-    color: var(--secondary-color);
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .button {
