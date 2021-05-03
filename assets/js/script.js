@@ -155,316 +155,326 @@ function titleSearch (event){
 
 // start map //
 
-var stores = {
-    "type": "FeatureCollection",
-    "query": [
-    "bookstores"
-    ],
-    "features": [
-    {
-    "id": "poi.807453933585",
-    "type": "Feature",
-    "place_type": [
-    "poi"
-    ],
-    "relevance": 0.95,
-    "properties": {
-    "foursquare": "4c7019b3d7fab1f7f5605dc9",
-    "landmark": true,
-    "address": "135 N 545 W",
-    "category": "bookstore, book shop, shop",
-    "text": "Deseret Book"
-    },
-    "text": "Deseret Book",
-    "place_name": "Deseret Book, 135 N 545 W, West Bountiful, Utah 84010, United States",
-    "center": [
-    -111.893448,
-    40.891003
-    ],
-    "geometry": {
-    "coordinates": [
-    -111.893448,
-    40.891003
-    ],
-    "type": "Point"
-    },
-    "context": [
-    {
-    "id": "neighborhood.275085",
-    "text": "Wayne Cooper"
-    },
-    {
-    "id": "postcode.5966955103480940",
-    "text": "84010"
-    },
-    {
-    "id": "place.7947184679692280",
-    "text": "West Bountiful"
-    },
-    {
-    "id": "district.13226022120464670",
-    "wikidata": "Q26631",
-    "text": "Davis County"
-    },
-    {
-    "id": "region.5297500142670350",
-    "wikidata": "Q829",
-    "short_code": "US-UT",
-    "text": "Utah"
-    },
-    {
-    "id": "country.19678805456372290",
-    "wikidata": "Q30",
-    "short_code": "us",
-    "text": "United States"
-    }
-    ]
-    },
-    {
-    "id": "poi.94489294889",
-    "type": "Feature",
-    "place_type": [
-    "poi"
-    ],
-    "relevance": 0.95,
-    "properties": {
-    "foursquare": "4b5e649cf964a520d98c29e3",
-    "landmark": true,
-    "address": "340 S 500 W",
-    "text": "Barnes & Noble",
-    "category": "bookstore, book shop, shop"
-    },
-    "text": "Barnes & Noble",
-    "place_name": "Barnes & Noble, 340 S 500 W, West Bountiful, Utah 84010, United States",
-    "center": [
-    -111.894098,
-    40.885856
-    ],
-    "geometry": {
-    "coordinates": [
-    -111.894098,
-    40.885856
-    ],
-    "type": "Point"
-    },
-    "context": [
-    {
-    "id": "neighborhood.278411",
-    "text": "Tanglewood Acres"
-    },
-    {
-    "id": "postcode.5966955103480940",
-    "text": "84010"
-    },
-    {
-    "id": "place.7947184679692280",
-    "text": "West Bountiful"
-    },
-    {
-    "id": "district.13226022120464670",
-    "wikidata": "Q26631",
-    "text": "Davis County"
-    },
-    {
-    "id": "region.5297500142670350",
-    "wikidata": "Q829",
-    "short_code": "US-UT",
-    "text": "Utah"
-    },
-    {
-    "id": "country.19678805456372290",
-    "wikidata": "Q30",
-    "short_code": "us",
-    "text": "United States"
-    }
-    ]
-    },
-    {
-    "id": "poi.764504285659",
-    "type": "Feature",
-    "place_type": [
-    "poi"
-    ],
-    "relevance": 0.95,
-    "properties": {
-    "foursquare": "4b0586a7f964a520426922e3",
-    "landmark": true,
-    "address": "510 Main St",
-    "text": "Dolly's Bookstore",
-    "category": "bookstore, book shop, shop"
-    },
-    "text": "Dolly's Bookstore",
-    "place_name": "Dolly's Bookstore, 510 Main St, Park City, Utah 84060, United States",
-    "center": [
-    -111.496063,
-    40.644489
-    ],
-    "geometry": {
-    "coordinates": [
-    -111.496063,
-    40.644489
-    ],
-    "type": "Point"
-    },
-    "context": [
-    {
-    "id": "neighborhood.2103864",
-    "text": "Old Town"
-    },
-    {
-    "id": "postcode.15345401668203880",
-    "text": "84060"
-    },
-    {
-    "id": "place.10791674996692240",
-    "wikidata": "Q482993",
-    "text": "Park City"
-    },
-    {
-    "id": "district.4982699978591080",
-    "wikidata": "Q484563",
-    "text": "Summit County"
-    },
-    {
-    "id": "region.5297500142670350",
-    "wikidata": "Q829",
-    "short_code": "US-UT",
-    "text": "Utah"
-    },
-    {
-    "id": "country.19678805456372290",
-    "wikidata": "Q30",
-    "short_code": "us",
-    "text": "United States"
-    }
-    ]
-    },
-    {
-    "id": "poi.532576029559",
-    "type": "Feature",
-    "place_type": [
-    "poi"
-    ],
-    "relevance": 0.95,
-    "properties": {
-    "foursquare": "4ad4f291f964a52028fe20e3",
-    "landmark": true,
-    "address": "1511 S 1500 E",
-    "text": "The King's English Bookshop",
-    "category": "bookstore, book shop, shop"
-    },
-    "text": "The King's English Bookshop",
-    "place_name": "The King's English Bookshop, 1511 S 1500 E, Salt Lake City, Utah 84105, United States",
-    "center": [
-    -111.847866,
-    40.736896
-    ],
-    "geometry": {
-    "type": "Point",
-    "coordinates": [
-    -111.847866,
-    40.736896
-    ]
-    },
-    "context": [
-    {
-    "id": "neighborhood.2106534",
-    "text": "Wasatch Hollow"
-    },
-    {
-    "id": "postcode.9418559101431400",
-    "text": "84105"
-    },
-    {
-    "id": "place.6848933112302480",
-    "wikidata": "Q23337",
-    "text": "Salt Lake City"
-    },
-    {
-    "id": "district.11340436017683800",
-    "wikidata": "Q484556",
-    "text": "Salt Lake County"
-    },
-    {
-    "id": "region.5297500142670350",
-    "wikidata": "Q829",
-    "short_code": "US-UT",
-    "text": "Utah"
-    },
-    {
-    "id": "country.19678805456372290",
-    "wikidata": "Q30",
-    "short_code": "us",
-    "text": "United States"
-    }
-    ]
-    },
-    {
-    "id": "poi.833223669004",
-    "type": "Feature",
-    "place_type": [
-    "poi"
-    ],
-    "relevance": 0.95,
-    "properties": {
-    "foursquare": "4ad4f291f964a5202afe20e3",
-    "landmark": true,
-    "address": "151 S 500 E",
-    "category": "bookstore, book shop, shop",
-    "text": "Golden Braid Bookstore"
-    },
-    "text": "Golden Braid Bookstore",
-    "place_name": "Golden Braid Bookstore, 151 S 500 E, Salt Lake City, Utah 84102, United States",
-    "center": [
-    -111.876309,
-    40.765757
-    ],
-    "geometry": {
-    "coordinates": [
-    -111.876309,
-    40.765757
-    ],
-    "type": "Point"
-    },
-    "context": [
-    {
-    "id": "neighborhood.2102828",
-    "text": "Central City"
-    },
-    {
-    "id": "postcode.10746829549261410",
-    "text": "84102"
-    },
-    {
-    "id": "place.6848933112302480",
-    "wikidata": "Q23337",
-    "text": "Salt Lake City"
-    },
-    {
-    "id": "district.11340436017683800",
-    "wikidata": "Q484556",
-    "text": "Salt Lake County"
-    },
-    {
-    "id": "region.5297500142670350",
-    "wikidata": "Q829",
-    "short_code": "US-UT",
-    "text": "Utah"
-    },
-    {
-    "id": "country.19678805456372290",
-    "wikidata": "Q30",
-    "short_code": "us",
-    "text": "United States"
-    }
-    ]
-    }
-    ], }
-
-    stores.features.forEach(function(store, i){
+// var stores = {
+//     "type": "FeatureCollection",
+//     "query": [
+//     "bookstores"
+//     ],
+//     "features": [
+//     {
+//     "id": "poi.807453933585",
+//     "type": "Feature",
+//     "place_type": [
+//     "poi"
+//     ],
+//     "relevance": 0.95,
+//     "properties": {
+//     "foursquare": "4c7019b3d7fab1f7f5605dc9",
+//     "landmark": true,
+//     "address": "135 N 545 W",
+//     "category": "bookstore, book shop, shop",
+//     "text": "Deseret Book"
+//     },
+//     "text": "Deseret Book",
+//     "place_name": "Deseret Book, 135 N 545 W, West Bountiful, Utah 84010, United States",
+//     "center": [
+//     -111.893448,
+//     40.891003
+//     ],
+//     "geometry": {
+//     "coordinates": [
+//     -111.893448,
+//     40.891003
+//     ],
+//     "type": "Point"
+//     },
+//     "context": [
+//     {
+//     "id": "neighborhood.275085",
+//     "text": "Wayne Cooper"
+//     },
+//     {
+//     "id": "postcode.5966955103480940",
+//     "text": "84010"
+//     },
+//     {
+//     "id": "place.7947184679692280",
+//     "text": "West Bountiful"
+//     },
+//     {
+//     "id": "district.13226022120464670",
+//     "wikidata": "Q26631",
+//     "text": "Davis County"
+//     },
+//     {
+//     "id": "region.5297500142670350",
+//     "wikidata": "Q829",
+//     "short_code": "US-UT",
+//     "text": "Utah"
+//     },
+//     {
+//     "id": "country.19678805456372290",
+//     "wikidata": "Q30",
+//     "short_code": "us",
+//     "text": "United States"
+//     }
+//     ]
+//     },
+//     {
+//     "id": "poi.94489294889",
+//     "type": "Feature",
+//     "place_type": [
+//     "poi"
+//     ],
+//     "relevance": 0.95,
+//     "properties": {
+//     "foursquare": "4b5e649cf964a520d98c29e3",
+//     "landmark": true,
+//     "address": "340 S 500 W",
+//     "text": "Barnes & Noble",
+//     "category": "bookstore, book shop, shop"
+//     },
+//     "text": "Barnes & Noble",
+//     "place_name": "Barnes & Noble, 340 S 500 W, West Bountiful, Utah 84010, United States",
+//     "center": [
+//     -111.894098,
+//     40.885856
+//     ],
+//     "geometry": {
+//     "coordinates": [
+//     -111.894098,
+//     40.885856
+//     ],
+//     "type": "Point"
+//     },
+//     "context": [
+//     {
+//     "id": "neighborhood.278411",
+//     "text": "Tanglewood Acres"
+//     },
+//     {
+//     "id": "postcode.5966955103480940",
+//     "text": "84010"
+//     },
+//     {
+//     "id": "place.7947184679692280",
+//     "text": "West Bountiful"
+//     },
+//     {
+//     "id": "district.13226022120464670",
+//     "wikidata": "Q26631",
+//     "text": "Davis County"
+//     },
+//     {
+//     "id": "region.5297500142670350",
+//     "wikidata": "Q829",
+//     "short_code": "US-UT",
+//     "text": "Utah"
+//     },
+//     {
+//     "id": "country.19678805456372290",
+//     "wikidata": "Q30",
+//     "short_code": "us",
+//     "text": "United States"
+//     }
+//     ]
+//     },
+//     {
+//     "id": "poi.764504285659",
+//     "type": "Feature",
+//     "place_type": [
+//     "poi"
+//     ],
+//     "relevance": 0.95,
+//     "properties": {
+//     "foursquare": "4b0586a7f964a520426922e3",
+//     "landmark": true,
+//     "address": "510 Main St",
+//     "text": "Dolly's Bookstore",
+//     "category": "bookstore, book shop, shop"
+//     },
+//     "text": "Dolly's Bookstore",
+//     "place_name": "Dolly's Bookstore, 510 Main St, Park City, Utah 84060, United States",
+//     "center": [
+//     -111.496063,
+//     40.644489
+//     ],
+//     "geometry": {
+//     "coordinates": [
+//     -111.496063,
+//     40.644489
+//     ],
+//     "type": "Point"
+//     },
+//     "context": [
+//     {
+//     "id": "neighborhood.2103864",
+//     "text": "Old Town"
+//     },
+//     {
+//     "id": "postcode.15345401668203880",
+//     "text": "84060"
+//     },
+//     {
+//     "id": "place.10791674996692240",
+//     "wikidata": "Q482993",
+//     "text": "Park City"
+//     },
+//     {
+//     "id": "district.4982699978591080",
+//     "wikidata": "Q484563",
+//     "text": "Summit County"
+//     },
+//     {
+//     "id": "region.5297500142670350",
+//     "wikidata": "Q829",
+//     "short_code": "US-UT",
+//     "text": "Utah"
+//     },
+//     {
+//     "id": "country.19678805456372290",
+//     "wikidata": "Q30",
+//     "short_code": "us",
+//     "text": "United States"
+//     }
+//     ]
+//     },
+//     {
+//     "id": "poi.532576029559",
+//     "type": "Feature",
+//     "place_type": [
+//     "poi"
+//     ],
+//     "relevance": 0.95,
+//     "properties": {
+//     "foursquare": "4ad4f291f964a52028fe20e3",
+//     "landmark": true,
+//     "address": "1511 S 1500 E",
+//     "text": "The King's English Bookshop",
+//     "category": "bookstore, book shop, shop"
+//     },
+//     "text": "The King's English Bookshop",
+//     "place_name": "The King's English Bookshop, 1511 S 1500 E, Salt Lake City, Utah 84105, United States",
+//     "center": [
+//     -111.847866,
+//     40.736896
+//     ],
+//     "geometry": {
+//     "type": "Point",
+//     "coordinates": [
+//     -111.847866,
+//     40.736896
+//     ]
+//     },
+//     "context": [
+//     {
+//     "id": "neighborhood.2106534",
+//     "text": "Wasatch Hollow"
+//     },
+//     {
+//     "id": "postcode.9418559101431400",
+//     "text": "84105"
+//     },
+//     {
+//     "id": "place.6848933112302480",
+//     "wikidata": "Q23337",
+//     "text": "Salt Lake City"
+//     },
+//     {
+//     "id": "district.11340436017683800",
+//     "wikidata": "Q484556",
+//     "text": "Salt Lake County"
+//     },
+//     {
+//     "id": "region.5297500142670350",
+//     "wikidata": "Q829",
+//     "short_code": "US-UT",
+//     "text": "Utah"
+//     },
+//     {
+//     "id": "country.19678805456372290",
+//     "wikidata": "Q30",
+//     "short_code": "us",
+//     "text": "United States"
+//     }
+//     ]
+//     },
+//     {
+//     "id": "poi.833223669004",
+//     "type": "Feature",
+//     "place_type": [
+//     "poi"
+//     ],
+//     "relevance": 0.95,
+//     "properties": {
+//     "foursquare": "4ad4f291f964a5202afe20e3",
+//     "landmark": true,
+//     "address": "151 S 500 E",
+//     "category": "bookstore, book shop, shop",
+//     "text": "Golden Braid Bookstore"
+//     },
+//     "text": "Golden Braid Bookstore",
+//     "place_name": "Golden Braid Bookstore, 151 S 500 E, Salt Lake City, Utah 84102, United States",
+//     "center": [
+//     -111.876309,
+//     40.765757
+//     ],
+//     "geometry": {
+//     "coordinates": [
+//     -111.876309,
+//     40.765757
+//     ],
+//     "type": "Point"
+//     },
+//     "context": [
+//     {
+//     "id": "neighborhood.2102828",
+//     "text": "Central City"
+//     },
+//     {
+//     "id": "postcode.10746829549261410",
+//     "text": "84102"
+//     },
+//     {
+//     "id": "place.6848933112302480",
+//     "wikidata": "Q23337",
+//     "text": "Salt Lake City"
+//     },
+//     {
+//     "id": "district.11340436017683800",
+//     "wikidata": "Q484556",
+//     "text": "Salt Lake County"
+//     },
+//     {
+//     "id": "region.5297500142670350",
+//     "wikidata": "Q829",
+//     "short_code": "US-UT",
+//     "text": "Utah"
+//     },
+//     {
+//     "id": "country.19678805456372290",
+//     "wikidata": "Q30",
+//     "short_code": "us",
+//     "text": "United States"
+//     }
+//     ]
+//     }
+//     ], }
+    var storeURL = 'https://api.mapbox.com/geocoding/v5/mapbox.places/bookstores.json?proximity=-111.5531,%2040.9218479&access_token=pk.eyJ1IjoidGVsbGVyd2V0emVsIiwiYSI6ImNrbnh6ZWU5dzBvcTMybnBwMDlyMTEyNjAifQ.vDHwC8Gy_qK8AGL2qFzhVw';
+    var stores = fetch(storeURL)
+    .then(function(response){ 
+      if(response.ok){
+          return response.json();
+      } else {
+          alert("Error: " + response.statusText);
+      }
+    })   
+    .then(function(stores){
+      
+      stores.features.forEach(function(store, i){
         store.properties.id = i;
       });
-
+    
       map.on('load', function (e) {
         /* Add the data to your map as a layer */
         map.addLayer({
@@ -478,6 +488,24 @@ var stores = {
         });
         buildLocationList(stores);
       });
+    });
+    // stores.features.forEach(function(store, i){
+    //     store.properties.id = i;
+    //   });
+
+    //   map.on('load', function (e) {
+    //     /* Add the data to your map as a layer */
+    //     map.addLayer({
+    //       "id": "locations",
+    //       "type": "circle",
+    //       /* Add a GeoJSON source containing place coordinates and information. */
+    //       "source": {
+    //         "type": "geojson",
+    //         "data": stores
+    //       }
+    //     });
+    //     buildLocationList(stores);
+    //   });
 
       function buildLocationList(data) {
         data.features.forEach(function(store, i){
@@ -500,7 +528,7 @@ var stores = {
           link.href = '#map';
           link.className = 'title';
           link.id = "link-" + prop.id;
-          link.innerHTML = prop.text + "<br />" + prop.address;
+          link.innerHTML = data.features[i].text + "<br />" + prop.address;
 
           link.addEventListener('click', function(e){
             for (var i = 0; i < data.features.length; i++) {
@@ -531,10 +559,10 @@ var stores = {
         var popUps = document.getElementsByClassName('mapboxgl-popup');
         /** Check if there is already a popup on the map and if so, remove it */
         if (popUps[0]) popUps[0].remove();
-      
+        
         var popup = new mapboxgl.Popup({ closeOnClick: false })
           .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3>' +  currentFeature.properties.text + '</h3>' +
+          .setHTML('<h3>' +  currentFeature.text + '</h3>' +
             '<h4>' + currentFeature.properties.address + '</h4>')
           .addTo(map);
       }
